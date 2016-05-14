@@ -94,6 +94,7 @@ TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
     # 'django.template.loaders.eggs.Loader',
+    'django_mobile.loader.Loader',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -106,6 +107,8 @@ MIDDLEWARE_CLASSES = (
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'ratelimit.middleware.RatelimitMiddleware',
+    'django_mobile.middleware.MobileDetectionMiddleware',
+    'django_mobile.middleware.SetFlavourMiddleware',
 )
 
 # HTTPS_SUPPORT = True
@@ -138,6 +141,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.static',
     'django.contrib.auth.context_processors.auth',
     'django.contrib.messages.context_processors.messages',
+    'django_mobile.context_processors.flavour',
 )
 
 INSTALLED_APPS = (
@@ -151,6 +155,7 @@ INSTALLED_APPS = (
     'colorful',
     'rest_framework',
     'compressor',
+    'django_mobile',
     'cellcounter.main',
     'cellcounter.cc_kapi',
     'cellcounter.accounts',
