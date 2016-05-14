@@ -59,8 +59,8 @@ var notloggedin=true;
     <div class="modal-body">
         <p>Once reset, counters are zeroed, and this cannot be undone.</p>
     <form class="form-inline">
-        <input type="button" id="reset-count" class="btn btn-danger" value="Reset">
-        <input type="button" id="cancel-reset" class="btn" value="Cancel">
+        <input type="button" id="reset-count-confirm" class="btn btn-danger" value="Reset">
+        <input type="button" id="reset-count-cancel" class="btn" value="Cancel">
     </form>
     </div>
 </div>
@@ -93,6 +93,7 @@ var notloggedin=true;
 {% block additional_scripts %}
 {% compress js %}
 <script src="{% static "js/visualise.js" %}"></script>
+<script src="{% static "js/keyboard.js" %}"></script>
 <script src="{% static "js/counter.js" %}"></script>
 <script>
     $(function() {
