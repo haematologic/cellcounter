@@ -1,0 +1,11 @@
+# Tests can be run from the command line with grunt / phantomjs
+
+# install node into the current virtualenv
+nodeenv -p
+
+# install the grunt command line interface
+npm install -g grunt-cli
+
+# run the tests
+grunt test
+

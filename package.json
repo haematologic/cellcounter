@@ -1,0 +1,17 @@
+{
+  "name": "cellcounter",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-qunit": "~0.2.0",
+    "phantomjs-prebuilt": "^2.1.7"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cellcounter/cellcounter.git"
+  }
+}
