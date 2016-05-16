@@ -39,7 +39,7 @@ div#counterbox {
   display: none;
   background-color: #ffffff;
   z-index: 11;
-  height: 350px;
+  /*height: 350px;*/
   border: 2px solid black;
   border-radius: 15px;
 }
@@ -158,12 +158,62 @@ div#counterbox.largekeyboard {
 
 }
 
+/* CSS for the mobile keyboard */
+
+.mobilekeyboard #boxholder1 { border: solid white 1px; padding-left: 35%; padding-right: 35%; overflow: auto;}
+.mobilekeyboard #boxholder2 { border: solid white 1px; padding-left: 0px; overflow: auto;}
+.mobilekeyboard #boxholder3 { border: solid white 1px; padding-left: 35%; padding-right: 35%; overflow: auto;}
+
+.mobilekeyboard .box1 {
+    width: 100%;
+    line-height: 1.1em;
+    padding-bottom: 50%;
+}
+
+.mobilekeyboard .box2 {
+    width: 30%;
+    line-height: 1.1em;
+    padding-bottom: 15%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.mobilekeyboard div#keysbox {
+  width: 100%;
+  margin-top: 40px;
+  margin-left: 0px;
+  margin-right: 0px;
+  border: none;
+}
+
+.mobilekeyboard #edit_button {
+    position: absolute;
+    margin-top: 8px;
+    right: 20px;
+    top: 0;
+}
+
+.mobilekeyboard #buttonsbox { border: solid white 1px; position: static; padding-left: 20px; padding-top: 5px; padding-bottom: 10px; overflow: auto;}
+
+.mobilekeyboard #reset_button {
+    position: static;
+    top: 10px;
+    left: 20px;
+}
+
+.mobilekeyboard #close_button {
+    position: static;
+    top: 50px;
+    left: 20px;
+}
+
+
 /* CSS for the small keyboard */
 
-#boxholder1 { min-height: 65px; border: solid white 1px; padding-left: 25px }
-#boxholder2 { min-height: 65px; border: solid white 1px; padding-left: 55px }
-#boxholder3 { min-height: 65px; border: solid black 1px; }
-#boxholder3holder { min-height: 65px; border: solid white 1px; }
+.smallkeyboard #boxholder1 { min-height: 65px; border: solid white 1px; padding-left: 25px }
+.smallkeyboard #boxholder2 { min-height: 65px; border: solid white 1px; padding-left: 55px }
+.smallkeyboard #boxholder3 { min-height: 65px; border: solid black 1px; }
+.smallkeyboard #boxholder3holder { min-height: 65px; border: solid white 1px; }
 
 #boxholder_spacebar { min-height: 65px; border: white 1px; padding-left: 155px; }
 #boxholder_shiftkey { min-height: 65px; border: white 1px; padding-left: 200px; }
@@ -173,7 +223,7 @@ div#counterbox.largekeyboard {
     line-height: 1.1em;
 }
 
-.box1,
+.box1, .box2,
 .box_spacebar,
 .box_shiftkey {
     border: solid black 1px;
@@ -190,12 +240,14 @@ div#counterbox.largekeyboard {
 }
 
 .box1 p,
+.box2 p,
 .box_spacebar,
 .box_shiftkey {
     font-weight: bold;
 }
 
-.box1 p {
+.box1 p,
+.box2 p {
     -webkit-border-top-left-radius: 5px;
     -webkit-border-top-right-radius: 5px;
     -moz-border-radius-topleft: 5px;
