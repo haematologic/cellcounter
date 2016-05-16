@@ -160,23 +160,29 @@ div#counterbox.largekeyboard {
 
 /* CSS for the mobile keyboard */
 
-.mobilekeyboard #boxholder1 { border: solid white 1px; padding-left: 35%; padding-right: 35%; overflow: auto;}
-.mobilekeyboard #boxholder2 { border: solid white 1px; padding-left: 0px; overflow: auto;}
-.mobilekeyboard #boxholder3 { border: solid white 1px; padding-left: 35%; padding-right: 35%; overflow: auto;}
+.mobilekeyboard #boxholder1 { border: solid white 1px; padding-left: 0px; margin-bottom: 5%; overflow: auto;}
+.mobilekeyboard #boxholder2 { border: solid white 1px; padding-left: 0px; margin-bottom: 5%; overflow: auto;}
+.mobilekeyboard #boxholder3 { border: solid white 1px; padding-left: 0px; overflow: auto;}
 
 .mobilekeyboard .box1 {
-    width: 100%;
+    width: 21%;
     line-height: 1.1em;
-    padding-bottom: 50%;
+    padding-bottom: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .mobilekeyboard .box2 {
-    width: 30%;
+    width: 21%;
     line-height: 1.1em;
-    padding-bottom: 15%;
-    margin-left: 2%;
-    margin-right: 2%;
+    padding-bottom: 21%;
+    margin-left: 5%;
+    margin-right: 5%;
+    float: left;
+    background-image: url("../images/compass.svg");
+    background-size: cover;
 }
+
 
 .mobilekeyboard div#keysbox {
   width: 100%;
@@ -223,7 +229,7 @@ div#counterbox.largekeyboard {
     line-height: 1.1em;
 }
 
-.box1, .box2,
+.box1,
 .box_spacebar,
 .box_shiftkey {
     border: solid black 1px;
@@ -240,14 +246,12 @@ div#counterbox.largekeyboard {
 }
 
 .box1 p,
-.box2 p,
 .box_spacebar,
 .box_shiftkey {
     font-weight: bold;
 }
 
-.box1 p,
-.box2 p {
+.box1 p {
     -webkit-border-top-left-radius: 5px;
     -webkit-border-top-right-radius: 5px;
     -moz-border-radius-topleft: 5px;
