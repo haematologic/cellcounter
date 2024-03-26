@@ -25,8 +25,17 @@ services:
       - 127.0.0.1:8001:80
     depends_on:
       - app
-
+  db:
+    image: postgres:15
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=hello_django
+      - POSTGRES_PASSWORD=hello_django
+      - POSTGRES_DB=hello_django_dev
 volumes:
     static_volume:
     media_volume:
+      external: true
+    postgres_data:
       external: true
