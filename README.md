@@ -75,7 +75,7 @@ To build and run the docker image:
 
     docker compose up -d
 
-    docker compose exec web python manage.py migrate --no-input
+    docker compose exec app python manage.py migrate --no-input
 
 To stop the docker image:
 
