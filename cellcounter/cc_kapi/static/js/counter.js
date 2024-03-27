@@ -669,7 +669,7 @@ function open_keyboard (done) {
 var results = (function () {
     var counter_object = {};
 
-    var abnormal_total, me_ratio, myeloid, count_total;
+    var abnormal_total, me_ratio, myeloid, myeloid_pct, count_total;
 
     var results_data;
 
@@ -686,7 +686,7 @@ var results = (function () {
 
         results_data = [];
 
-        var erythroid, myeloid;
+        var erythroid;
         var myeloid_cells = ['neutrophils', 'meta', 'myelocytes', 'promyelocytes',
             'basophils', 'eosinophils', 'monocytes'];
         myeloid = 0;
@@ -755,6 +755,9 @@ var results = (function () {
         if (me_ratio === 'Infinity') {
             me_ratio = 'Incalculable';
         }
+
+        myeloid_pct = Math.round(((myeloid / count_total) * 100));
+        myeloid_pct = myeloid_pct.toString() + '%';
     }
 
     function update_html () {
@@ -772,7 +775,7 @@ var results = (function () {
 
         stats_div.find('td#total-count').text(count_total);
         stats_div.find('td#me-ratio').text(me_ratio);
-        stats_div.find('td#myeloid').text(myeloid);
+        stats_div.find('td#myeloid_pct').text(myeloid_pct);
 
         if (abnormal_total === 0) {
             /* If we don't have abnormal cells, don't show the columns */
@@ -804,7 +807,7 @@ var results = (function () {
         stats_text = '<pre class="stats"><code>';
         stats_text += 'Cells Counted: ' + count_total + '\n';
         stats_text += 'M:E Ratio: ' + me_ratio + '\n';
-        stats_text += 'Myeloid: ' + myeloid + '\n';
+        stats_text += 'Myeloid/total: ' + myeloid_pct + '\n';
         stats_text += per;
         stats_text += '</code></pre>';
         stats_div.append(stats_text);
