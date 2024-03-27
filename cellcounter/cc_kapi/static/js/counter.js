@@ -669,7 +669,7 @@ function open_keyboard (done) {
 var results = (function () {
     var counter_object = {};
 
-    var abnormal_total, me_ratio, count_total;
+    var abnormal_total, me_ratio, myeloid, count_total;
 
     var results_data;
 
