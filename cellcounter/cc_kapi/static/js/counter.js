@@ -772,6 +772,7 @@ var results = (function () {
 
         stats_div.find('td#total-count').text(count_total);
         stats_div.find('td#me-ratio').text(me_ratio);
+        stats_div.find('td#myeloid').text(myeloid);
 
         if (abnormal_total === 0) {
             /* If we don't have abnormal cells, don't show the columns */
@@ -803,6 +804,7 @@ var results = (function () {
         stats_text = '<pre class="stats"><code>';
         stats_text += 'Cells Counted: ' + count_total + '\n';
         stats_text += 'M:E Ratio: ' + me_ratio + '\n';
+        stats_text += 'Myeloid: ' + myeloid + '\n';
         stats_text += per;
         stats_text += '</code></pre>';
         stats_div.append(stats_text);
